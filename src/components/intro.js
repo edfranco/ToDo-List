@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
+import './intro.css'
 
 class Intro extends Component{
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          name: "",
+          isSubmitted: false
+        }
+      }
+    
     render() {
         return(
-        <div className="App">
+        <div>
             
                 <div className="header">
-                    <h1>To Do List</h1>
+                    <h1>{this.state.name}To Do List</h1>
                 </div>
             
                 <div className="body">
                     <h2>What is your name?</h2>
             
-                <form ref="form" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="My First Name" 
                          name="name" onChange={this.handleChange}>
                     </input>
-                    <button type="submit" className="btn">Submit</button>
-                </form>
+                    <button onClick={this.handleSubmit} 
+                    className="btn">Submit</button>
 
                 </div>
         </div>
