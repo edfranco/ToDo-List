@@ -5,7 +5,7 @@ class List extends Component {
         return(
             <div>
                 <div className="header">
-                    <h1>{this.state.name} To Do List</h1>
+                    <h1>{this.props.name}'s To Do List</h1>
                 </div>
             </div>
         )
